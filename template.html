@@ -29,13 +29,15 @@
   <body>
     <div class="navigation-bar">
       <div class="navigation-bar-header">
-        <div class="navigation-bar-header-title">Ammie's<br />Website</div>
+        <div class="navigation-bar-header-title">
+          <div><compoundtitle>Ammie's Website</compoundtitle>エミーのサイト</div>
+        </div>
       </div>
 
       <div class="navigation-bar-links">
-        <h2 style="margin-top: 0px">Navigation</h2>
-        <a href="/">Home</a>
-        <a href="/pages/about.html">About</a>
+        <h2 style="margin-top: 0px"><compoundtitle>Navigation</compoundtitle>メニュー</h2>
+        <a href="/"><div><compoundtitle>Home</compoundtitle>トップページ</div></a>
+        <a href="/pages/about.html"><div><compoundtitle>About</compoundtitle>自己紹介</div></a>
       </div>
 
       <div class="navigation-bar-footer">
@@ -71,7 +73,7 @@
       <div class="page-center">
         <span>Page created at {date}</span>
 
-        <h1>{title}</h1>
+        <h1><compoundtitle>{subtitle}</compoundtitle>{title}</h1>
 
         {content}
 

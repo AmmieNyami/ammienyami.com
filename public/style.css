@@ -1,243 +1,257 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("/fonts/inter.css");
 
 :root {
-  --navigation-bar-width: 320px;
-  --flag-stripe-1: #7659da;
-  --flag-stripe-2: #ffcfed;
-  --flag-stripe-3: #ffffff;
+    --navigation-bar-width: 320px;
+    --flag-stripe-1: #7659da;
+    --flag-stripe-2: #ffcfed;
+    --flag-stripe-3: #ffffff;
 
-  --navigation-bar-footer-color: #7659da;
-  --navigation-bar-footer-foreground-color: #ffffff;
+    --standard-border-width: 4px;
 
-  --navigation-bar-links-color: #000000;
-  --navigation-bar-links-border-color: var(--navigation-bar-footer-color);
-  --navigation-bar-links-border-width: 4px;
-  --navigation-bar-links-foreground-color: #ffcfed;
-  --navigation-bar-links-highlight-color: #ffffff;
+    --navigation-bar-footer-color: #7659da;
+    --navigation-bar-footer-foreground-color: #ffffff;
 
-  --foreground-color: #ffcfed;
-  --background-color: #000000;
-  --background-color-alt: #0a0a0a;
+    --navigation-bar-links-color: #000000;
+    --navigation-bar-links-border-color: var(--navigation-bar-footer-color);
+    --navigation-bar-links-foreground-color: #ffcfed;
+    --navigation-bar-links-highlight-color: #ffffff;
 
-  --chromium-scrollbar-color: #7659da;
-  --chromium-scrollbar-hover-color: #594a8f;
-  --chromium-scrollbar-background-color: #30284d;
+    --page-center-background-color: #000000DD;
 
-  --title-color: #ffffff;
-  --title-border: #7659da;
+    --navigation-bar-background-color: #000000DD;
+    --navigation-bar-background-color-alt: #0a0a0aDD;
 
-  --code-background-color: #1d1d1d;
-  --code-border-color: #181818;
+    --foreground-color: #ffcfed;
 
-  --link-color: #7659da;
+    --chromium-scrollbar-color: #7659da;
+    --chromium-scrollbar-hover-color: #594a8f;
+    --chromium-scrollbar-background-color: #30284d;
+
+    --title-color: #ffffff;
+    --title-border: #7659da;
+
+    --code-background-color: #1d1d1d;
+    --code-border-color: #181818;
+
+    --link-color: #7659da;
 }
 
 /* Fix the stupid scroll bar */
 ::-webkit-scrollbar {
-  width: var(--navigation-bar-links-border-width);
+    width: var(--standard-border-width);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--chromium-scrollbar-color);
-  border-radius: 10px;
+    background-color: var(--chromium-scrollbar-color);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--chromium-scrollbar-hover-color);
+    background-color: var(--chromium-scrollbar-hover-color);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--chromium-scrollbar-background-color);
+    background-color: var(--chromium-scrollbar-background-color);
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  color: var(--foreground-color);
+    color: var(--foreground-color);
 
-  background-color: var(--background-color);
-  background-image:
-    linear-gradient(var(--background-color-alt) 1.1px, transparent 1.1px),
-    linear-gradient(
-      to right,
-      var(--background-color-alt) 1.1px,
-      var(--background-color) 1.1px
-    );
-  background-size: 22px 22px;
+    background-color: black;
+    background-image:
+        url('/images/backgrounds/patterns/pattern2.webp'),
+        url('/images/backgrounds/images/pexels-brett-sayles-992734.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
-  font-family: "Roboto", sans;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .navigation-bar {
-  position: fixed;
-  top: 0;
+    position: fixed;
+    top: 0;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  width: var(--navigation-bar-width);
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
+    width: var(--navigation-bar-width);
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation-bar-header {
-  width: var(--navigation-bar-width);
-  height: var(--navigation-bar-width);
-  flex-shrink: 0;
+    width: var(--navigation-bar-width);
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-  background: linear-gradient(
-    45deg,
-    var(--flag-stripe-1) 20%,
-    var(--flag-stripe-2) 0 40%,
-    var(--flag-stripe-3) 0 60%,
-    var(--flag-stripe-2) 0 80%,
-    var(--flag-stripe-1) 0
-  );
-  display: flex;
-  align-items: center;
+    background: linear-gradient(
+        45deg,
+        var(--flag-stripe-1) 20%,
+        var(--flag-stripe-2) 0 40%,
+        var(--flag-stripe-3) 0 60%,
+        var(--flag-stripe-2) 0 80%,
+        var(--flag-stripe-1) 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation-bar-header-title {
-  padding-left: 10px;
-  color: var(--flag-stripe-1);
-  font-size: 4.5em;
-  font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
 
-  /* I love CSS */
-  /* prettier-ignore */
-  text-shadow: var(--flag-stripe-2) 6px 0px 0px, var(--flag-stripe-2) 5.91686px 0.995377px 0px, var(--flag-stripe-2) 5.66974px 1.96317px 0px, var(--flag-stripe-2) 5.2655px 2.87655px 0px, var(--flag-stripe-2) 4.71532px 3.71022px 0px, var(--flag-stripe-2) 4.03447px 4.44106px 0px, var(--flag-stripe-2) 3.24181px 5.04883px 0px, var(--flag-stripe-2) 2.35931px 5.51667px 0px, var(--flag-stripe-2) 1.41143px 5.83163px 0px, var(--flag-stripe-2) 0.424423px 5.98497px 0px, var(--flag-stripe-2) -0.574341px 5.97245px 0px, var(--flag-stripe-2) -1.55719px 5.79441px 0px, var(--flag-stripe-2) -2.49688px 5.45578px 0px, var(--flag-stripe-2) -3.36738px 4.96596px 0px, var(--flag-stripe-2) -4.14455px 4.33852px 0px, var(--flag-stripe-2) -4.80686px 3.59083px 0px, var(--flag-stripe-2) -5.33596px 2.74364px 0px, var(--flag-stripe-2) -5.71718px 1.8204px 0px, var(--flag-stripe-2) -5.93995px 0.84672px 0px, var(--flag-stripe-2) -5.99811px -0.150428px 0px, var(--flag-stripe-2) -5.89004px -1.14341px 0px, var(--flag-stripe-2) -5.61874px -2.1047px 0px, var(--flag-stripe-2) -5.19172px -3.00766px 0px, var(--flag-stripe-2) -4.62082px -3.82727px 0px, var(--flag-stripe-2) -3.92186px -4.54081px 0px, var(--flag-stripe-2) -3.11421px -5.12852px 0px, var(--flag-stripe-2) -2.22026px -5.57409px 0px, var(--flag-stripe-2) -1.26477px -5.86518px 0px, var(--flag-stripe-2) -0.274238px -5.99373px 0px, var(--flag-stripe-2) 0.723898px -5.95617px 0px, var(--flag-stripe-2) 1.70197px -5.75355px 0px, var(--flag-stripe-2) 2.63288px -5.39147px 0px, var(--flag-stripe-2) 3.49082px -4.87998px 0px, var(--flag-stripe-2) 4.25202px -4.23324px 0px, var(--flag-stripe-2) 4.89538px -3.46919px 0px, var(--flag-stripe-2) 5.40307px -2.60899px 0px, var(--flag-stripe-2) 5.76102px -1.67649px 0px, var(--flag-stripe-2) 5.95932px -0.697531px 0px;
+    color: var(--flag-stripe-1);
+    font-size: 2.5em;
+    font-weight: bold;
+
+    /* I love CSS */
+    text-shadow: var(--flag-stripe-2) 6px 0px 0px, var(--flag-stripe-2) 5.91686px 0.995377px 0px, var(--flag-stripe-2) 5.66974px 1.96317px 0px, var(--flag-stripe-2) 5.2655px 2.87655px 0px, var(--flag-stripe-2) 4.71532px 3.71022px 0px, var(--flag-stripe-2) 4.03447px 4.44106px 0px, var(--flag-stripe-2) 3.24181px 5.04883px 0px, var(--flag-stripe-2) 2.35931px 5.51667px 0px, var(--flag-stripe-2) 1.41143px 5.83163px 0px, var(--flag-stripe-2) 0.424423px 5.98497px 0px, var(--flag-stripe-2) -0.574341px 5.97245px 0px, var(--flag-stripe-2) -1.55719px 5.79441px 0px, var(--flag-stripe-2) -2.49688px 5.45578px 0px, var(--flag-stripe-2) -3.36738px 4.96596px 0px, var(--flag-stripe-2) -4.14455px 4.33852px 0px, var(--flag-stripe-2) -4.80686px 3.59083px 0px, var(--flag-stripe-2) -5.33596px 2.74364px 0px, var(--flag-stripe-2) -5.71718px 1.8204px 0px, var(--flag-stripe-2) -5.93995px 0.84672px 0px, var(--flag-stripe-2) -5.99811px -0.150428px 0px, var(--flag-stripe-2) -5.89004px -1.14341px 0px, var(--flag-stripe-2) -5.61874px -2.1047px 0px, var(--flag-stripe-2) -5.19172px -3.00766px 0px, var(--flag-stripe-2) -4.62082px -3.82727px 0px, var(--flag-stripe-2) -3.92186px -4.54081px 0px, var(--flag-stripe-2) -3.11421px -5.12852px 0px, var(--flag-stripe-2) -2.22026px -5.57409px 0px, var(--flag-stripe-2) -1.26477px -5.86518px 0px, var(--flag-stripe-2) -0.274238px -5.99373px 0px, var(--flag-stripe-2) 0.723898px -5.95617px 0px, var(--flag-stripe-2) 1.70197px -5.75355px 0px, var(--flag-stripe-2) 2.63288px -5.39147px 0px, var(--flag-stripe-2) 3.49082px -4.87998px 0px, var(--flag-stripe-2) 4.25202px -4.23324px 0px, var(--flag-stripe-2) 4.89538px -3.46919px 0px, var(--flag-stripe-2) 5.40307px -2.60899px 0px, var(--flag-stripe-2) 5.76102px -1.67649px 0px, var(--flag-stripe-2) 5.95932px -0.697531px 0px;
 }
 
 .navigation-bar-links {
-  min-height: 100px;
-  flex-grow: 1;
+    min-height: 100px;
+    flex-grow: 1;
 
-  padding: 20px;
+    padding: 20px;
 
-  box-shadow: inset calc(var(--navigation-bar-links-border-width) * -1) 0 0 0
-    var(--navigation-bar-links-border-color);
+    box-shadow: inset calc(var(--standard-border-width) * -1) 0 0 0
+                var(--navigation-bar-links-border-color);
 
-  overflow: auto;
+    overflow: auto;
 
-  background-image: linear-gradient(
-    45deg,
-    var(--background-color-alt) 25%,
-    var(--background-color) 25%,
-    var(--background-color) 50%,
-    var(--background-color-alt) 50%,
-    var(--background-color-alt) 75%,
-    var(--background-color) 75%,
-    var(--background-color) 100%
-  );
-  background-size: 56.57px 56.57px;
+    background-image: linear-gradient(
+        45deg,
+        var(--navigation-bar-background-color-alt) 25%,
+        var(--navigation-bar-background-color) 25%,
+        var(--navigation-bar-background-color) 50%,
+        var(--navigation-bar-background-color-alt) 50%,
+        var(--navigation-bar-background-color-alt) 75%,
+        var(--navigation-bar-background-color) 75%,
+        var(--navigation-bar-background-color) 100%
+    );
+    background-size: 56.57px 56.57px;
 }
 
 .navigation-bar-links a {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  border-radius: 5px;
+    border-radius: 5px;
 
-  color: var(--navigation-bar-links-foreground-color);
-  text-decoration: none;
+    color: var(--navigation-bar-links-foreground-color);
+    text-decoration: none;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-  transition: padding-left 0.2s;
+    transition: padding-left 0.2s;
 }
 
 .navigation-bar-links a::before {
-  content: "✦";
-  font-size: 2em;
-  margin-right: 10px;
+    content: "✦";
+    font-size: 2em;
+    margin-right: 10px;
 }
 
 .navigation-bar-links a:hover {
-  background-image: linear-gradient(
-    45deg,
-    var(--navigation-bar-links-highlight-color) 0%,
-    transparent 65%
-  );
-  color: var(--background-color);
-  font-weight: 700;
-  padding-left: 10px;
+    background-image: linear-gradient(
+        45deg,
+        var(--navigation-bar-links-highlight-color) 0%,
+        transparent 65%
+    );
+    color: var(--navigation-bar-background-color);
+    font-weight: 700;
+    padding-left: 10px;
 }
 
 .navigation-bar-links p {
-  margin: 0;
+    margin: 0;
 }
 
 .navigation-bar-footer {
-  color: var(--navigation-bar-footer-foreground-color);
-  flex-shrink: 0;
-  background-color: var(--navigation-bar-footer-color);
+    color: var(--navigation-bar-footer-foreground-color);
+    flex-shrink: 0;
+    background-color: var(--navigation-bar-footer-color);
 }
 
 .page {
-  margin: 0px;
-  margin-left: var(--navigation-bar-width);
+    margin: 0px;
+    margin-left: var(--navigation-bar-width);
 }
 
 .page-center {
-  width: 75%;
+    width: 75%;
+    min-height: 100vh;
+    box-sizing: border-box;
 
-  margin: auto;
+    border-left: var(--standard-border-width) solid var(--foreground-color);
+    border-right: var(--standard-border-width) solid var(--foreground-color);
 
-  padding-top: 50px;
-  padding-bottom: 50px;
+    margin: auto;
+    padding: 50px;
+
+    background-color: var(--page-center-background-color);
 }
 
-@media (height <= 541px) {
-  :root {
-    --navigation-bar-width: 200px;
-  }
+@media (width <= 891px) {
+    :root {
+        --navigation-bar-width: 200px;
+    }
 
-  .navigation-bar-header-title {
-    font-size: 2.25em;
-  }
+    .navigation-bar-header-title {
+        font-size: 1.6em;
+    }
+
+    .page-center {
+        width: 100%;
+        border: none;
+    }
 }
 
 @media (width <= 613px) {
-  :root {
-    --navigation-bar-width: 100%;
-  }
+    :root {
+        --navigation-bar-width: 100%;
+    }
 
-  .page {
-    margin-left: 0;
-  }
+    .page {
+        margin-left: 0;
+    }
 
-  .navigation-bar {
-    position: static;
-  }
+    .navigation-bar {
+        position: static;
+    }
 
-  .navigation-bar-header {
-    height: 100px;
-  }
+    .navigation-bar-header {
+        height: 100px;
+    }
 
-  .navigation-bar-header-title {
-    font-size: 2.25em;
-  }
+    .navigation-bar-header-title {
+        font-size: 2.25em;
+    }
 
-  .navigation-bar-links {
-    padding-bottom: calc(var(--navigation-bar-links-border-width) + 5px);
-    box-shadow: inset 0 calc(var(--navigation-bar-links-border-width) * -1) 0 0
-      var(--navigation-bar-links-border-color);
-  }
+    .navigation-bar-links {
+        padding-bottom: calc(var(--standard-border-width) + 5px);
+        box-shadow: inset 0 calc(var(--standard-border-width) * -1) 0 0
+                    var(--navigation-bar-links-border-color);
+    }
 
-  .navigation-bar-footer {
-    display: none;
-  }
+    .navigation-bar-footer {
+        display: none;
+    }
 }
 
 h1,
@@ -246,12 +260,17 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 10px 0px 10px 0px;
-  font-weight: bold;
-  color: var(--title-color);
-  /* prettier-ignore */
-  text-shadow: var(--title-border) 2px 0px 0px, var(--title-border) 1.75517px 0.958851px 0px, var(--title-border) 1.0806px 1.68294px 0px, var(--title-border) 0.141474px 1.99499px 0px, var(--title-border) -0.832294px 1.81859px 0px, var(--title-border) -1.60229px 1.19694px 0px, var(--title-border) -1.97998px 0.28224px 0px, var(--title-border) -1.87291px -0.701566px 0px, var(--title-border) -1.30729px -1.5136px 0px, var(--title-border) -0.421592px -1.95506px 0px, var(--title-border) 0.567324px -1.91785px 0px, var(--title-border) 1.41734px -1.41108px 0px, var(--title-border) 1.92034px -0.558831px 0px;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+    color: var(--title-color);
+    text-shadow: var(--title-border) 2px 0px 0px, var(--title-border) 1.75517px 0.958851px 0px, var(--title-border) 1.0806px 1.68294px 0px, var(--title-border) 0.141474px 1.99499px 0px, var(--title-border) -0.832294px 1.81859px 0px, var(--title-border) -1.60229px 1.19694px 0px, var(--title-border) -1.97998px 0.28224px 0px, var(--title-border) -1.87291px -0.701566px 0px, var(--title-border) -1.30729px -1.5136px 0px, var(--title-border) -0.421592px -1.95506px 0px, var(--title-border) 0.567324px -1.91785px 0px, var(--title-border) 1.41734px -1.41108px 0px, var(--title-border) 1.92034px -0.558831px 0px;
+}
+
+compoundtitle {
+    display: block;
+    font-size: 0.55em;
+    font-weight: normal;
 }
 
 code,
@@ -259,20 +278,20 @@ pre,
 tt,
 kbd,
 samp {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 
-  padding: 2px;
+    padding: 2px;
 
-  background-color: var(--code-background-color);
-  border-style: double;
-  border-width: 4px;
-  border-radius: 7px;
-  border-color: var(--background-color);
+    background-color: var(--code-background-color);
+    border-style: double;
+    border-width: 4px;
+    border-radius: 7px;
+    border-color: var(--page-center-background-color);
 }
 
 a {
-  color: var(--link-color);
+    color: var(--link-color);
 }

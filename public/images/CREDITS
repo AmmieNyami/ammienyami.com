@@ -12,7 +12,9 @@ Emojis
 
 - Spinny cat emoji - /images/emojis/spinny_cat.gif - https://gitlab.com/renere/spinny_blobs
 
-My Artwork
-==========
+Other
+=====
 
-- My drawings - /images/drawings/* - https://ammienyami.com, licensed under the CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+- Welcome image - /images/welcome.png - https://ammienyami.com, using assets from the /image_sources/welcome/ directory at the root of the git repository of this website's source code
+- Background patterns - /images/backgrounds/patterns/* - https://ammienyami.com, using assets from the /image_sources/patterns/ directory at the root of the git repository of this website's source code
+- Background images - /images/backgrounds/images/* - see corresponding `*.credits.txt` files for credits
