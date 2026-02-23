@@ -1,4 +1,4 @@
-*.html
-pages/
-robots.txt
-sitemap.xml
+/*.html
+/pages/
+/robots.txt
+/sitemap.xml
