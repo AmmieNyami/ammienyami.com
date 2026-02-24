@@ -1,3 +1,3 @@
 # My Website
 
-[My website](https://ammienyami.com).
+Moved to Codeberg: <https://codeberg.org/AmmieNyami/ammienyami.com>.
